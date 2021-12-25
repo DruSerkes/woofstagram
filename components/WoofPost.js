@@ -1,17 +1,13 @@
 import * as React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, StyleSheet } from 'react-native';
 import { Title } from './Title';
 
 export const WoofPost = ({ uri, title, description }) => (
   <View style={woofPostStyles.layout}>
-    <Image source={uri} style={woofPostStyles.image} />
+    <Image source={{ uri }} style={woofPostStyles.image} />
     <View style={woofPostStyles.content}>
       <Title>{title}</Title>
-      <Text
-        numberOfLines={2}
-        elipsizeMode='tail'
-        style={woofPostStyles.description}
-      >
+      <Text numberOfLines={2} elipsizeMode='tail' style={woofPostStyles.description}>
         {description}
       </Text>
     </View>
@@ -20,9 +16,11 @@ export const WoofPost = ({ uri, title, description }) => (
 
 const woofPostStyles = StyleSheet.create({
   layout: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    flex: 1,
     flexDirection: 'row',
-    marginVertical: 5
+    marginHorizontal: 10,
+    marginVertical: 10
   },
   image: {
     borderRadius: 10,

@@ -10,7 +10,7 @@ export const HomeScreen = () => {
   const renderWoof = ({ item }) => <WoofCard key={item.id} avatar={item.avatar} name={item.name} />;
 
   return (
-    <ScrollView style={{ padding: 7, marginLeft: 5 }}>
+    <View style={{ padding: 7, marginLeft: 5 }}>
 
       <View style={{ height: '20%', marginBottom: 8 }}>
         <Heading>Trending Woofs</Heading>
@@ -22,6 +22,6 @@ export const HomeScreen = () => {
         <FlatList data={data.posts} renderItem={renderPost} keyExtractor={post => post.id} />
       </View>
 
-    </ScrollView>
+    </View>
   )
 };

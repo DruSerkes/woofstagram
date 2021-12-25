@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { registerRootComponent } from 'expo';
 import { SafeAreaView } from 'react-native';
+import { HomeScreen } from './screens/HomeScreen';
 
 
 const App = () => (

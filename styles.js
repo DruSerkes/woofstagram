@@ -9,13 +9,13 @@ export const styles = StyleSheet.create({
     width: 50,
   },
   heading: {
-    fontWeight: 800,
+    fontWeight: "800",
     fontSize: 20,
     marginBottom: 5
   },
   title: {
     color: 'black',
     fontSize: 12,
-    fontWeight: 'bold'
+    fontWeight: "bold"
   },
 });
