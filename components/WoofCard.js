@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 import { Avatar } from './Avatar';
 import { Title } from './Title';
 
 export const WoofCard = ({ name, avatar }) => (
-  <View style={woofCardStyles.card}>
+  <Pressable style={({ pressed }) => [woofCardStyles.card, pressed && { backgroundColor: 'purple' }]}>
     <Avatar uri={avatar} />
     <Title>{name}</Title>
-  </View>
+  </Pressable >
 );
 
 const woofCardStyles = StyleSheet.create({
