@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { SafeAreaView, Text, View, StyleSheet, Button } from 'react-native';
-import { HomeScreen } from './screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { MainNavigator } from './navigators/MainNavigator';
 
 const Stack = createStackNavigator();
-
 
 const SignInScreen = ({ navigation }) => {
   const goToMain = () => navigation.navigate('Main');

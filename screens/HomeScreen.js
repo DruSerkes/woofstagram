@@ -17,7 +17,7 @@ export const HomeScreen = () => {
         <FlatList data={data.woofs} renderItem={renderWoof} keyExtractor={woof => woof.id} horizontal />
       </View>
 
-      <View>
+      <View style={{ marginBottom: 10 }}>
         <Heading>New Woof Posts</Heading>
         <FlatList data={data.posts} renderItem={renderPost} keyExtractor={post => post.id} />
       </View>
