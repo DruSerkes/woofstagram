@@ -6,8 +6,8 @@ const { useState } = React;
 
 export const SearchScreen = () => {
   const [value, setValue] = useState('');
-  const handleChangeValue = (e) => setValue(e.value);
-  const handleSearch = () => console.log("SEARCHING FOR: ", value);
+  const handleChangeValue = (e) => setValue(e);
+  const handleSearch = () => console.log('SEARCHING FOR: ', value);
   return (
     <View style={[styles.view, { flexDirection: 'row' }]}>
       <TextInput
