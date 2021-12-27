@@ -3,13 +3,18 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreen } from '../screens/HomeScreen';
 import { SearchScreen } from '../screens/SearchScreen';
 import { AccountScreen } from '../screens/AccountScreen';
-// import Ionicons from '@expo/vector-icons/Ionicons' // TODO: ADD ICONS
+import { TabBarIcon } from '../components/TabBarIcon';
 
 const Tab = createBottomTabNavigator();
 
 export const MainNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={({ route }) => ({
+      tabBarIcon: ({ size, focused, color }) => <TabBarIcon size={size} focused={focused} color={color} route={route} />,
+      tabBarActiveTintColor: 'darkslateblue',
+      tabBarInactiveTintColor: 'gray',
+    })}
+    >
       <Tab.Screen
         name='Home'
         component={HomeScreen}
